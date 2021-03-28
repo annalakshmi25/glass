@@ -1,0 +1,64 @@
+{% load static %}
+<html>
+    <head>
+        <title>Detection of glass type</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>DETECTION OF GLASS TYPE</h1>
+        <h2>RandomForestClassifier</h2>
+        <form action="calculate">
+            <div class="user-box">
+                <input type="text"  value="{{exp1}}"name="exp1" required="">
+                <label>Refractive index:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp2}}" name="exp2" required="">
+                <label>Sodium:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp3}}" name="exp3" required="">
+                <label>Magnesium:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp4}}" name="exp4" required="">
+                <label>Aluminum:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp5}}" name="exp5" required="">
+                <label>Silicon: </label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp6}}" name="exp6" required="">
+                <label>Potassium:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp7}}" name="exp7" required="">
+                <label>Calcium:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp8}}" name="exp8" required="">
+                <label>Barium:</label>
+            </div>
+            <div class="user-box">
+                <input type="text" value="{{exp9}}" name="exp9" required="" >
+                <label>Iron:</label>
+            </div>
+            <input type="submit" name="submit" value="predict" class="submitbtn" />
+        </form><br>
+        <h2>Type of glass: {{predicted}}</h2>
+        <h5><br>Types:<br>
+            <br>1-building windows float processed</br>
+            <br>2-building windows non float processed</br>
+            <br>3-vehicle windows float processed</br>
+            <br>4-vehicle windows non float processed</br>
+            <br>5-containers</br>
+            <br>6-tableware</br>
+            <br>7-headlamps</br>
+        </h5>
+        
+    </div>
+</body>
+</html>
